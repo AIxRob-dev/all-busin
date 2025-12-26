@@ -938,285 +938,463 @@
             transform: scale(1.2);
         }
         
-     .footer {
-            background: linear-gradient(135deg, var(--cream) 0%, var(--warm-white) 50%, var(--cream) 100%);
-            color: var(--text-dark);
-            padding: 4rem 0 0;
-            position: relative;
-            overflow: hidden;
-            border-top: 3px solid var(--royal-gold);
-        }
-        
-        .footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 30%, rgba(212, 165, 116, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(212, 165, 116, 0.05) 0%, transparent 50%),
-                linear-gradient(45deg, transparent 40%, rgba(212, 165, 116, 0.02) 50%, transparent 60%);
-            pointer-events: none;
-        }
-        
-        .footer-top {
-            position: relative;
-            z-index: 2;
-            padding-bottom: 3rem;
-        }
-        
-        .footer-brand {
-            text-align: center;
-            margin-bottom: 3rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid rgba(212, 165, 116, 0.3);
-        }
-        
-        .footer-logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2.5rem;
-            font-weight: 600;
-            color: var(--deep-navy);
-            margin-bottom: 1rem;
-            letter-spacing: 4px;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .footer-logo::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 2px;
-            background: linear-gradient(90deg, var(--royal-gold), var(--accent-brown));
-        }
-        
-        .footer-tagline {
-            font-family: 'Crimson Text', serif;
-            font-size: 1.1rem;
-            color: var(--text-light);
-            max-width: 500px;
-            margin: 0 auto;
-            line-height: 1.8;
-            font-style: italic;
-        }
-        
-        /* Plain Footer Content - No Cards */
-        .footer-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .footer-section {
-            text-align: center;
-            /* Removed all card styling */
-        }
-        
-        .footer-section h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.6rem;
-            margin-bottom: 1.5rem;
-            color: var(--deep-navy);
-            font-weight: 500;
-            position: relative;
-        }
-        
-        .footer-section h3::after {
-            content: '';
-            position: absolute;
-            bottom: -6px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 35px;
-            height: 2px;
-            background: var(--royal-gold);
-        }
-        
-        .footer-section p,
-        .footer-section a {
-            color: var(--text-light);
-            text-decoration: none;
-            line-height: 1.8;
-            transition: all 0.3s ease;
-            font-family: 'Crimson Text', serif;
-            font-size: 0.95rem;
-            margin-bottom: 0.6rem;
-            display: block;
-        }
-        
-        .footer-section a:hover {
-            color: var(--royal-gold);
-            transform: translateX(5px);
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 0.8rem;
-            padding: 0.6rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        
-        .contact-item:hover {
-            background: rgba(212, 165, 116, 0.1);
-        }
-        
-        .contact-item i {
-            color: var(--royal-gold);
-            font-size: 1rem;
-            width: 20px;
-            text-align: center;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 1.5rem;
-        }
-        
-        .social-link {
-            width: 60px;
+.footer {
+    background: linear-gradient(135deg, var(--cream) 0%, var(--warm-white) 50%, var(--cream) 100%);
+    color: var(--text-dark);
+    padding: 4rem 0 0;
+    position: relative;
+    overflow: hidden;
+    border-top: 3px solid var(--royal-gold);
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(212, 165, 116, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(212, 165, 116, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.footer-top {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 3rem;
+}
+
+.footer-brand {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(212, 165, 116, 0.3);
+}
+
+.footer-logo {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-logo .logo-icon {
     height: 60px;
-    font-size: 1.4rem;
-            background: linear-gradient(135deg, var(--royal-gold), var(--accent-brown));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            text-decoration: none;
-            color: white;
-        }
-        
-        .social-link::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
-        }
-        
-        .social-link:hover::before {
-            left: 100%;
-        }
-        
-        .social-link:hover {
-            background: var(--deep-navy);
-            transform: translateY(-8px) scale(1.1);
-            box-shadow: 0 15px 30px rgba(212, 165, 116, 0.4);
-        }
-        
-        .footer-bottom {
-            background: var(--deep-navy);
-            padding: 1.5rem 0;
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .footer-bottom-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        .footer-bottom p {
-            color: rgba(255, 255, 255, 0.8);
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.85rem;
-            margin: 0;
-        }
-        
-        .footer-links {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.85rem;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-        
-        .footer-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: var(--royal-gold);
-            transition: width 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            color: var(--royal-gold);
-        }
-        
-        .footer-links a:hover::after {
-            width: 100%;
-        }
+    width: auto;
+    transition: transform 0.3s ease;
+}
 
-        /* Responsive Design */
-        @media (min-width: 576px) {
-            .footer-content {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 2rem;
-            }
-        }
+.footer-logo:hover .logo-icon {
+    transform: scale(1.05);
+}
 
-        @media (min-width: 768px) {
-            .footer-content {
-                grid-template-columns: repeat(4, 1fr);
-                gap: 2rem;
-                text-align: left;
-            }
-            
-            .footer-section h3::after {
-                left: 0;
-                transform: none;
-            }
-            
-            .contact-item {
-                justify-content: flex-start;
-            }
-            
-            .social-links {
-                justify-content: flex-start;
-            }
-        }
+.footer-logo .logo-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--deep-navy);
+    letter-spacing: 3px;
+}
 
-        @media (min-width: 992px) {
-            .footer-bottom-content {
-                flex-direction: row;
-                justify-content: space-between;
-            }
-        }
+.footer-tagline {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-section {
+    text-align: center;
+}
+
+.footer-section h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    color: var(--deep-navy);
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 2px;
+    background: var(--royal-gold);
+}
+
+.footer-section p,
+.footer-section a {
+    color: var(--text-light);
+    text-decoration: none;
+    line-height: 1.8;
+    transition: all 0.3s ease;
+    font-family: 'Crimson Text', serif;
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+    display: block;
+}
+
+.footer-section a:hover {
+    color: var(--royal-gold);
+    transform: translateX(5px);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+    padding: 0.6rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    background: rgba(212, 165, 116, 0.1);
+}
+
+.contact-item i {
+    color: var(--royal-gold);
+    font-size: 1rem;
+    width: 20px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.social-link {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    background: linear-gradient(135deg, var(--royal-gold), var(--accent-brown));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.social-link:hover::before {
+    left: 100%;
+}
+
+.social-link:hover {
+    background: var(--deep-navy);
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 25px rgba(212, 165, 116, 0.4);
+}
+
+/* NAFROK Credit Section - Integrated */
+.nafrok-credit {
+    padding: 3rem 0 2rem;
+    border-top: 1px solid rgba(212, 165, 116, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.credit-ornament {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--royal-gold), transparent);
+    margin: 0 auto 2rem;
+    position: relative;
+}
+
+.credit-ornament::before,
+.credit-ornament::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--royal-gold);
+    transform: translateY(-50%);
+}
+
+.credit-ornament::before {
+    left: 0;
+}
+
+.credit-ornament::after {
+    right: 0;
+}
+
+.credit-container {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.credit-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: var(--text-light);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    opacity: 0.7;
+}
+
+.credit-brand {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 2rem 3rem;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 165, 116, 0.2);
+    border-radius: 20px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.credit-brand::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--royal-gold), var(--accent-brown), var(--royal-gold));
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+}
+
+.credit-brand:hover::before {
+    opacity: 0.3;
+}
+
+.credit-brand::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212, 165, 116, 0.2), transparent);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.credit-brand:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+.credit-brand:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(212, 165, 116, 0.3);
+    background: rgba(255, 255, 255, 0.8);
+    border-color: var(--royal-gold);
+}
+
+.brand-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: var(--deep-navy);
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.credit-brand:hover .brand-name {
+    color: var(--royal-gold);
+    letter-spacing: 6px;
+    text-shadow: 0 0 30px rgba(212, 165, 116, 0.3);
+}
+
+.brand-tagline {
+    font-family: 'Crimson Text', serif;
+    font-size: 0.95rem;
+    color: var(--text-light);
+    font-style: italic;
+    letter-spacing: 0.5px;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.credit-brand:hover .brand-tagline {
+    color: var(--accent-brown);
+}
+
+.credit-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%) translateX(10px);
+    opacity: 0;
+    font-size: 1.5rem;
+    color: var(--royal-gold);
+    transition: all 0.4s ease;
+}
+
+.credit-brand:hover .credit-icon {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+.footer-bottom {
+    background: var(--deep-navy);
+    padding: 1.5rem 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-bottom-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--royal-gold);
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--royal-gold);
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+/* Responsive */
+@media (min-width: 576px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        text-align: left;
+    }
+    
+    .footer-section h3::after {
+        left: 0;
+        transform: none;
+    }
+    
+    .contact-item {
+        justify-content: flex-start;
+    }
+    
+    .social-links {
+        justify-content: flex-start;
+    }
+}
+
+@media (min-width: 992px) {
+    .footer-bottom-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 576px) {
+    .credit-brand {
+        padding: 1.5rem 2rem;
+    }
+    
+    .brand-name {
+        font-size: 2rem;
+        letter-spacing: 3px;
+    }
+    
+    .brand-tagline {
+        font-size: 0.85rem;
+    }
+}
         
         /* Animations */
         @keyframes fadeInUp {
@@ -1899,87 +2077,100 @@
         </div>
     </section>
 
-   <footer class="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="footer-brand">
-                    <a href="#" class="logo">
-                        <img src="stanwyck.png" alt="Logo Icon" class="logo-icon" />
-                        <div class="logo-text">
-                            STAN<span class="logoa">WYCK</span>
-                        </div>
-                    </a>
-                    <p class="footer-tagline">Creating exceptional interior spaces that inspire and elevate your lifestyle. Experience the pinnacle of luxury design.</p>
+ <footer class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-brand">
+                <a href="#" class="footer-logo">
+                    <img src="stanwyck.png" alt="STANWYCK Logo" class="logo-icon" />
+                    <div class="logo-text">
+                        STAN<span class="logoa">WYCK</span>
+                    </div>
+                </a>
+                <p class="footer-tagline">Creating exceptional interior spaces that inspire and elevate your lifestyle. Experience the pinnacle of luxury design.</p>
+            </div>
+            
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <a href="#">Residential Design</a>
+                    <a href="#">Commercial Spaces</a>
+                    <a href="#">3D Visualization</a>
+                    <a href="#">Project Management</a>
+                    <a href="#">Custom Furniture</a>
+                    <a href="#">Color Consultation</a>
                 </div>
                 
-                <div class="footer-content">
-                    <div class="footer-section">
-                        <h3>Our Services</h3>
-                        <a href="#">Residential Design</a>
-                        <a href="#">Commercial Spaces</a>
-                        <a href="#">3D Visualization</a>
-                        <a href="#">Project Management</a>
-                        <a href="#">Custom Furniture</a>
-                        <a href="#">Color Consultation</a>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="#">About STANWYCK</a>
+                    <a href="#">Our Portfolio</a>
+                    <a href="#">Design Team</a>
+                    <a href="#">Client Stories</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Press & Media</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 98765 43210</span>
                     </div>
-                    
-                    <div class="footer-section">
-                        <h3>Company</h3>
-                        <a href="#">About Luxoria</a>
-                        <a href="#">Our Portfolio</a>
-                        <a href="#">Design Team</a>
-                        <a href="#">Client Stories</a>
-                        <a href="#">Careers</a>
-                        <a href="#">Press & Media</a>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>hello@stanwyck.com</span>
                     </div>
-                    
-                    <div class="footer-section">
-                        <h3>Get In Touch</h3>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+91 98765 43210</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>hello@luxoria.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Brigade Road, Bangalore</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-clock"></i>
-                            <span>Mon-Sat: 9:00 AM - 7:00 PM</span>
-                        </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Brigade Road, Bangalore</span>
                     </div>
-                    
-                    <div class="footer-section">
-                        <h3>Follow Us</h3>
-                        <p>Stay connected for design inspiration and latest updates</p>
-                        <div class="social-links">
-                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
-                        </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Mon-Sat: 9:00 AM - 7:00 PM</span>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <p>Stay connected for design inspiration and latest updates</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="footer-bottom-content">
-                    <p>&copy; 2025 Luxoria. All rights reserved.</p>
-                    <div class="footer-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Sitemap</a>
-                    </div>
+            
+            <!-- NAFROK CREDIT SECTION -->
+            <div class="nafrok-credit">
+                <div class="credit-ornament"></div>
+                <div class="credit-container">
+                    <p class="credit-label">Crafted With Excellence By</p>
+                    <a href="https://nafrok.com" target="_blank" rel="dofollow" class="credit-brand">
+                        <span class="brand-name">NAFROK</span>
+                        <span class="brand-tagline">Digital Experiences Designed for Modern Brands</span>
+                        <span class="credit-icon">→</span>
+                    </a>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+    
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom-content">
+                <p>&copy; 2025 STANWYCK. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
     <script>
         // Mobile Navigation
