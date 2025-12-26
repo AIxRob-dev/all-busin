@@ -1033,7 +1033,143 @@
         justify-content: center;
       }
     }
+.nafrok-credit {
+  margin-top: 50px;
+  padding-top: 40px;
+}
 
+.credit-divider {
+  width: 60px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 0 auto 30px;
+  transition: width 0.6s ease;
+}
+
+.nafrok-credit:hover .credit-divider {
+  width: 120px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.credit-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.credit-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.credit-brand {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 32px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.credit-brand::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.credit-brand:hover::before {
+  left: 100%;
+}
+
+.credit-brand:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.credit-brand:hover .credit-label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.brand-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.credit-brand:hover .brand-name {
+  letter-spacing: 3px;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.brand-tagline {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.credit-brand:hover .brand-tagline {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.credit-arrow {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.credit-brand:hover .credit-arrow {
+  opacity: 1;
+  right: 12px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nafrok-credit {
+    margin-top: 40px;
+    padding-top: 30px;
+  }
+  
+  .credit-brand {
+    padding: 14px 24px;
+  }
+  
+  .brand-name {
+    font-size: 16px;
+  }
+  
+  .brand-tagline {
+    font-size: 10px;
+  }
+}
     /* ===========================
        ANIMATIONS & REVEALS
        =========================== */
@@ -1429,14 +1565,16 @@
         <p>Made with ❤️ in Bengaluru</p>
       </div>
     </div>
-    <div style="text-align:center; margin-top:30px; opacity:0.9;">
-  <p style="font-size:14px;">
-    Website Designed & Developed by 
-    <a href="https://nafrok.com" target="_blank" rel="dofollow" 
-       style="color:#fff; text-decoration:underline;">
-      Nafrok — Premium Web Development Agency
+ <div class="nafrok-credit">
+  <div class="credit-divider"></div>
+  <div class="credit-content">
+    <span class="credit-label">CRAFTED BY</span>
+    <a href="https://nafrok.com" target="_blank" rel="dofollow" class="credit-brand">
+      <span class="brand-name">NAFROK</span>
+      <span class="brand-tagline">Digital Experiences for Modern Brands</span>
+      <span class="credit-arrow">→</span>
     </a>
-  </p>
+  </div>
 </div>
 
   </footer>
@@ -1598,6 +1736,7 @@ document.querySelectorAll('.menu-card').forEach(card => {
   </script>
 </body>
 </html>
+
 
 
 
